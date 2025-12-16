@@ -5,7 +5,7 @@ import { Button } from '../../components/ui/Button';
 import { mockReadiness } from '../../data/mockProgress';
 import { ArrowLeft, CheckCircle, Circle, Target } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts';
+import { ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Tooltip } from 'recharts';
 
 export default function CareerReadiness() {
     const navigate = useNavigate();
@@ -24,21 +24,44 @@ export default function CareerReadiness() {
 
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                     {/* Radar Chart */}
-                    <div className="h-[400px] w-full bg-white rounded-xl border border-slate-200 shadow-sm p-4">
-                        <ResponsiveContainer width="100%" height="100%">
-                            <RadarChart cx="50%" cy="50%" outerRadius="80%" data={mockReadiness.breakdown}>
-                                <PolarGrid />
-                                <PolarAngleAxis dataKey="category" />
-                                <PolarRadiusAxis angle={30} domain={[0, 100]} />
-                                <Radar
-                                    name="Me"
-                                    dataKey="score"
-                                    stroke="#0ea5e9"
-                                    fill="#0ea5e9"
-                                    fillOpacity={0.6}
-                                />
-                            </RadarChart>
-                        </ResponsiveContainer>
+                    <div className="space-y-6">
+                        <div className="h-[300px] w-full bg-white rounded-xl border border-slate-200 shadow-sm p-4">
+                            <ResponsiveContainer width="100%" height="100%">
+                                <RadarChart cx="50%" cy="50%" outerRadius="70%" data={mockReadiness.breakdown}>
+                                    <PolarGrid />
+                                    <PolarAngleAxis dataKey="category" tick={{ fontSize: 12 }} />
+                                    <PolarRadiusAxis angle={30} domain={[0, 100]} />
+                                    <Radar
+                                        name="Me"
+                                        dataKey="score"
+                                        stroke="#0ea5e9"
+                                        fill="#0ea5e9"
+                                        fillOpacity={0.6}
+                                    />
+                                    <Tooltip />
+                                </RadarChart>
+                            </ResponsiveContainer>
+                        </div>
+
+                        {/* Axis Descriptions */}
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                                <p className="text-xs font-bold text-slate-700 uppercase mb-1">Technical Skills</p>
+                                <p className="text-xs text-slate-500">Proficiency in coding languages & tools.</p>
+                            </div>
+                            <div className="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                                <p className="text-xs font-bold text-slate-700 uppercase mb-1">Soft Skills</p>
+                                <p className="text-xs text-slate-500">Communication, teamwork & leadership.</p>
+                            </div>
+                            <div className="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                                <p className="text-xs font-bold text-slate-700 uppercase mb-1">Portfolio</p>
+                                <p className="text-xs text-slate-500">Quality of projects & case studies.</p>
+                            </div>
+                            <div className="bg-slate-50 p-3 rounded-lg border border-slate-100">
+                                <p className="text-xs font-bold text-slate-700 uppercase mb-1">Network</p>
+                                <p className="text-xs text-slate-500">Professional connections & engagement.</p>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Breakdown & Suggestions */}

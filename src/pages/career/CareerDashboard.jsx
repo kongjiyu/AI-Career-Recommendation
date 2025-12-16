@@ -3,7 +3,7 @@ import { Layout } from '../../components/layout/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { mockCareers } from '../../data/mockCareers';
-import { ArrowRight, Filter, TrendingUp, DollarSign, Briefcase } from 'lucide-react';
+import { ArrowRight, Filter, TrendingUp, DollarSign, Briefcase, Building2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '../../lib/utils';
 
@@ -85,6 +85,15 @@ export default function CareerDashboard() {
                                                 <span className="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded-md">
                                                     +{career.requiredSkills.length - 3} more
                                                 </span>
+                                            )}
+                                        </div>
+
+                                        <div className="flex flex-wrap items-center gap-2 text-sm text-slate-500 pt-2 border-t border-slate-100 mt-3">
+                                            <Building2 className="h-4 w-4 text-slate-400" />
+                                            <span className="font-medium text-slate-700">Hiring:</span>
+                                            {career.topCompanies?.slice(0, 3).join(', ')}
+                                            {career.topCompanies?.length > 3 && (
+                                                <span className="text-xs bg-slate-100 px-1.5 py-0.5 rounded text-slate-500">+{career.topCompanies.length - 3}</span>
                                             )}
                                         </div>
                                     </div>

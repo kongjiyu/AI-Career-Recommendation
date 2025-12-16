@@ -3,7 +3,8 @@ import { Layout } from '../../components/layout/Layout';
 import { Card, CardContent } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { mockCourses } from '../../data/mockLearning';
-import { ArrowLeft, CheckCircle, PlayCircle, Clock, BarChart2, Award } from 'lucide-react';
+import { mockMentors } from '../../data/mockMentorship';
+import { ArrowLeft, CheckCircle, PlayCircle, Clock, BarChart2, Award, Calendar } from 'lucide-react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { cn } from '../../lib/utils';
 
@@ -11,6 +12,10 @@ export default function CourseDetail() {
     const { id } = useParams();
     const navigate = useNavigate();
     const course = mockCourses.find(c => c.id === parseInt(id)) || mockCourses[0];
+    const [isEnrolled, setIsEnrolled] = React.useState(false);
+
+    // Assign a random mentor or specific one if enrolled
+    const assignedMentor = mockMentors[0]; // Simplification for demo
 
     return (
         <Layout>
@@ -21,7 +26,14 @@ export default function CourseDetail() {
 
                 {/* Hero Section */}
                 <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-                    <div className={cn("h-48 w-full", course.thumbnailColor)}></div>
+                    <div className="h-64 w-full relative">
+                        <img
+                            src={course.image}
+                            alt={course.title}
+                            className="h-full w-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
                     <div className="p-8">
                         <div className="flex items-center gap-2 mb-4">
                             <span className="px-3 py-1 bg-slate-100 rounded-full text-xs font-medium text-slate-600">
@@ -60,13 +72,40 @@ export default function CourseDetail() {
                             </div>
                         </div>
 
-                        <div className="mt-8 flex gap-4">
-                            <Button size="lg" className="px-8" onClick={() => window.open(course.link, '_blank')}>
-                                Enroll Now
-                            </Button>
-                            <Button size="lg" variant="outline">
-                                Add to Roadmap
-                            </Button>
+                        <div className="mt-8 flex gap-4 items-center">
+                            {!isEnrolled ? (
+                                <>
+                                    <Button size="lg" className="px-8" onClick={() => setIsEnrolled(true)}>
+                                        Enroll Now
+                                    </Button>
+                                    <Button size="lg" variant="outline">
+                                        Add to Roadmap
+                                    </Button>
+                                </>
+                            ) : (
+                                <div className="w-full space-y-4 animate-in fade-in slide-in-from-bottom-4">
+                                    <div className="flex items-center gap-2 text-green-600 bg-green-50 p-3 rounded-lg border border-green-100">
+                                        <CheckCircle className="h-5 w-5" />
+                                        <span className="font-medium">You are enrolled! A mentor has been assigned to support you.</span>
+                                    </div>
+
+                                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 flex items-center justify-between">
+                                        <div className="flex items-center gap-4">
+                                            <div className="h-12 w-12 rounded-full bg-slate-200 overflow-hidden">
+                                                <img src={assignedMentor.image} alt={assignedMentor.name} className="h-full w-full object-cover" />
+                                            </div>
+                                            <div>
+                                                <p className="text-xs text-slate-500 font-medium uppercase">Course Mentor</p>
+                                                <p className="font-bold text-slate-900">{assignedMentor.name}</p>
+                                                <p className="text-xs text-slate-500">{assignedMentor.role} at {assignedMentor.company}</p>
+                                            </div>
+                                        </div>
+                                        <Button onClick={() => navigate(`/mentorship/${assignedMentor.id}/schedule`)}>
+                                            <Calendar className="mr-2 h-4 w-4" /> Book Session
+                                        </Button>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -85,7 +124,7 @@ export default function CourseDetail() {
                                             </div>
                                             <div>
                                                 <h4 className="font-medium text-slate-900">{item}</h4>
-                                                <p className="text-sm text-slate-500 mt-1">Video • Reading • Quiz</p>
+                                                <p className="text-sm text-slate-500 mt-1">Mentor Session • Practical Task • Code Review</p>
                                             </div>
                                         </div>
                                     ))}

@@ -71,6 +71,7 @@ export const mockJobs = [
         salary: '$90k - $120k',
         description: 'We are looking for a Junior AI Engineer to join our growing team. You will work on NLP models and help deploy them to production.',
         requirements: ['Python', 'PyTorch/TensorFlow', 'Basic NLP knowledge', 'Git'],
+        level: 'Entry Level',
         posted: '2 days ago'
     },
     {
@@ -78,10 +79,11 @@ export const mockJobs = [
         title: 'Data Science Intern',
         company: 'DataWiz Corp',
         location: 'New York, NY',
-        type: 'Internship',
+        type: 'Full-time',
         salary: '$30 - $40 / hr',
         description: 'A 3-month summer internship for students passionate about data. You will work directly with our analytics team on real-world problems.',
         requirements: ['SQL', 'Python/R', 'Communication skills', 'Currently executing a degree'],
+        level: 'Internship',
         posted: '5 days ago'
     },
     {
@@ -93,6 +95,7 @@ export const mockJobs = [
         salary: '$80k - $110k',
         description: 'Assist in the product lifecycle from ideation to launch. Great opportunity for someone looking to break into Product Management.',
         requirements: ['Strong organizational skills', 'Analytical mindset', 'Tech-savvy'],
+        level: 'Entry Level',
         posted: '1 week ago'
     },
     {
@@ -104,6 +107,7 @@ export const mockJobs = [
         salary: '$50 - $80 / hr',
         description: 'We need a React expert to help us build a new marketing dashboard. 3-month contract with possibility of extension.',
         requirements: ['React', 'Tailwind CSS', 'Figma', 'Responsive Design'],
+        level: 'Mid-Senior',
         posted: '1 day ago'
     }
 ];

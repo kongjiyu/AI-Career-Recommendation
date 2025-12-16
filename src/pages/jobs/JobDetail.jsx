@@ -3,7 +3,7 @@ import { Layout } from '../../components/layout/Layout';
 import { Card, CardContent } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { mockJobs } from '../../data/mockMentorship';
-import { ArrowLeft, MapPin, DollarSign, Briefcase, CheckCircle } from 'lucide-react';
+import { ArrowLeft, MapPin, DollarSign, Briefcase, CheckCircle, Building2 } from 'lucide-react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 export default function JobDetail() {
@@ -23,7 +23,12 @@ export default function JobDetail() {
                         <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
                             <div>
                                 <h1 className="text-3xl font-bold text-slate-900">{job.title}</h1>
-                                <p className="text-xl text-slate-600 mt-1">{job.company}</p>
+                                <div className="flex items-center gap-2 mt-2 text-slate-600">
+                                    <div className="p-1.5 bg-slate-100 rounded-lg">
+                                        <Building2 className="h-5 w-5 text-primary-accent" />
+                                    </div>
+                                    <p className="text-xl font-bold">{job.company}</p>
+                                </div>
                             </div>
                             <Button size="lg" onClick={() => navigate(`/jobs/${job.id}/apply`)}>
                                 Apply Now

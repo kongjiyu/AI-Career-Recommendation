@@ -61,17 +61,36 @@ export default function CareerDetail() {
 
                         <Card>
                             <CardHeader>
+                                <CardTitle>Top Hiring Companies</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="flex flex-wrap gap-3">
+                                    {career.topCompanies?.map((company, i) => (
+                                        <span key={i} className="px-4 py-2 bg-slate-100 rounded-lg text-slate-700 font-medium border border-slate-200">
+                                            {company}
+                                        </span>
+                                    ))}
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        <Card>
+                            <CardHeader>
                                 <CardTitle>Typical Day</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <ul className="space-y-3">
-                                    {career.dailyTasks.map((task, i) => (
-                                        <li key={i} className="flex items-start gap-3 text-slate-600">
-                                            <Calendar className="h-5 w-5 text-slate-400 shrink-0 mt-0.5" />
-                                            <span>{task}</span>
-                                        </li>
+                                <div className="space-y-6 relative ml-2">
+                                    <div className="absolute left-[7px] top-6 bottom-6 w-0.5 bg-slate-200"></div>
+                                    {career.typicalDay?.map((event, i) => (
+                                        <div key={i} className="flex gap-4 relative">
+                                            <div className="h-4 w-4 rounded-full border-2 border-primary-accent bg-white z-10 mt-1 shrink-0"></div>
+                                            <div>
+                                                <p className="text-xs font-bold text-primary-accent uppercase tracking-wide">{event.time}</p>
+                                                <p className="text-slate-700 font-medium">{event.activity}</p>
+                                            </div>
+                                        </div>
                                     ))}
-                                </ul>
+                                </div>
                             </CardContent>
                         </Card>
                     </div>

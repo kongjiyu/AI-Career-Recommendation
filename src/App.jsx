@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
+import DemoNav from './pages/DemoNav';
 import ProfileSetup from './pages/setup/ProfileSetup';
 import PortfolioUpload from './pages/setup/PortfolioUpload';
 import Assessment from './pages/assessment/Assessment';
@@ -30,6 +31,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/demo" element={<DemoNav />} />
         <Route path="/setup" element={<ProfileSetup />} />
         <Route path="/upload-portfolio" element={<PortfolioUpload />} />
         <Route path="/assessment" element={<Assessment />} />

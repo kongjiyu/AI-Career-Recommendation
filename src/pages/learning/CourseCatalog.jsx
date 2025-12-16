@@ -14,7 +14,7 @@ export default function CourseCatalog() {
     // Simple mock filter logic
     const filteredCourses = filter === 'All'
         ? mockCourses
-        : mockCourses.filter(c => c.price === filter || c.level === filter);
+        : mockCourses.filter(c => c.price === filter || c.level === filter || c.category === filter);
 
     return (
         <Layout>
@@ -84,10 +84,13 @@ export default function CourseCatalog() {
                         {filteredCourses.map(course => (
                             <Card key={course.id} className="flex flex-col hover:shadow-lg transition-shadow cursor-pointer group" onClick={() => navigate(`/learning/course/${course.id}`)}>
                                 {/* Thumbnail Placeholder */}
-                                <div className={cn("h-32 w-full relative", course.thumbnailColor)}>
-                                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs font-bold text-slate-800">
-                                        {course.platform}
-                                    </div>
+                                {/* Image Thumbnail */}
+                                <div className="h-40 w-full relative overflow-hidden">
+                                    <img
+                                        src={course.image}
+                                        alt={course.title}
+                                        className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    />
                                 </div>
 
                                 <CardContent className="flex-1 p-5 flex flex-col">

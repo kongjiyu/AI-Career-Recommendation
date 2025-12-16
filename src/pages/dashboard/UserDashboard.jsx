@@ -26,7 +26,7 @@ export default function UserDashboard() {
                 {/* Welcome Section */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div>
-                        <h1 className="text-3xl font-bold text-primary-highlight">Welcome back, Student!</h1>
+                        <h1 className="text-3xl font-bold text-primary-highlight">Welcome back, Kong Ji Yu!</h1>
                         <p className="text-slate-600 mt-1">You're making great progress towards becoming an <span className="font-semibold text-primary-accent">AI Solutions Architect</span>.</p>
                     </div>
                     <Button onClick={() => navigate('/learning/roadmap')}>
@@ -44,7 +44,7 @@ export default function UserDashboard() {
                                     <div className="flex justify-between items-start">
                                         <div>
                                             <p className="text-blue-100 text-sm font-medium mb-1">Career Readiness</p>
-                                            <h3 className="text-3xl font-bold">{mockReadiness.score}%</h3>
+                                            <h3 className="text-3xl font-bold text-white">{mockReadiness.score}%</h3>
                                             <p className="text-blue-100 text-xs mt-2">{mockReadiness.level}</p>
                                         </div>
                                         <Activity className="h-6 w-6 text-blue-200" />
@@ -74,10 +74,10 @@ export default function UserDashboard() {
                             </CardHeader>
                             <CardContent>
                                 <div className="flex gap-4 items-center p-4 bg-slate-50 rounded-lg border border-slate-100">
-                                    <div className={cn("h-16 w-16 rounded-lg shrink-0", nextCourse.thumbnailColor)}></div>
+                                    <img src={nextCourse.image} alt={nextCourse.title} className="h-16 w-16 rounded-lg shrink-0 object-cover" />
                                     <div className="flex-1">
                                         <h4 className="font-bold text-slate-900 line-clamp-1">{nextCourse.title}</h4>
-                                        <p className="text-sm text-slate-500 mb-2">{nextCourse.provider} • 65% Complete</p>
+                                        <p className="text-sm text-slate-500 mb-2">{nextCourse.mentor} • 65% Complete</p>
                                         <div className="w-full bg-slate-200 rounded-full h-1.5">
                                             <div className="bg-primary-accent h-1.5 rounded-full" style={{ width: '65%' }}></div>
                                         </div>
