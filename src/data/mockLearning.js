@@ -3,76 +3,76 @@ export const mockCourses = [
         id: 1,
         title: 'Advanced Python for Data Science',
         provider: 'Coursera',
-        mentor: 'Dr. Sarah Chen',
+        mentors: ['Dr. Sarah Chen', 'Emily Davis', 'David Miller', 'Michael Brown'],
         platform: 'Coursera',
         duration: '40 hours',
         level: 'Advanced',
         rating: 4.8,
         reviews: 1240,
         price: 'Paid',
-        fee: '$49.99',
+        fee: 'RM 229',
         category: 'Data Science',
         image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
         skills: ['Python', 'Data Analysis', 'Pandas'],
         link: 'https://www.coursera.org/learn/python-data-analysis',
         description: 'Master Python for data science. Learn to analyze and visualize data using pandas, NumPy, and Matplotlib.',
         syllabus: [
-            'Week 1: Python Basics Refresher',
-            'Week 2: Data Manipulation with Pandas',
-            'Week 3: Data Visualization',
-            'Week 4: Final Project'
+            { title: 'Week 1: Python Basics Refresher', hours: 10, details: 'Review of Python syntax, data types, and control structures. Introduction to Jupyter Notebooks and setting up the environment.' },
+            { title: 'Week 2: Data Manipulation with Pandas', hours: 10, details: 'Deep dive into Pandas Series and DataFrames. Data cleaning, merging, handling missing values, and advanced indexing techniques.' },
+            { title: 'Week 3: Data Visualization', hours: 10, details: 'Creating static and interactive visualizations using Matplotlib and Seaborn. Best practices for storytelling with data.' },
+            { title: 'Week 4: Final Project', hours: 10, details: 'Apply all learned concepts to analyzing a real-world dataset. Build a complete data pipeline and present the findings.' }
         ]
     },
     {
         id: 2,
         title: 'Machine Learning A-Z',
-        provider: 'Udemy',
+        mentors: ['Dr. Andrew Ng', 'Kirill Eremenko'],
         platform: 'Udemy',
         duration: '40 hours',
         level: 'Intermediate',
         rating: 4.7,
         reviews: 8500,
         price: 'Paid',
-        fee: '$89.99',
+        fee: 'RM 399',
         category: 'AI & ML',
         image: 'https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=2664&auto=format&fit=crop',
         skills: ['Machine Learning', 'Python', 'Algorithms'],
         link: 'https://www.coursera.org/specializations/machine-learning-introduction', // User requested all link to Coursera
         description: 'Learn to create Machine Learning Algorithms in Python and R from two Data Science experts.',
         syllabus: [
-            'Introduction to ML',
-            'Regression',
-            'Classification',
-            'Clustering'
+            { title: 'Introduction to ML', hours: 5 },
+            { title: 'Regression', hours: 10 },
+            { title: 'Classification', hours: 15 },
+            { title: 'Clustering', hours: 10 }
         ]
     },
     {
         id: 3,
         title: 'System Design Interview Guide',
-        provider: 'Educative.io',
+        mentors: ['Alex Xu', 'Sahn Lam'],
         platform: 'Educative',
         duration: '10 hours',
         level: 'Advanced',
         rating: 4.9,
         reviews: 500,
         price: 'Paid',
-        fee: '$39.99',
+        fee: 'RM 179',
         category: 'System Design',
         image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop',
         skills: ['System Design', 'Scalability', 'Architecture'],
         link: 'https://www.coursera.org/learn/software-design-architecture', // User requested all link to Coursera
         description: 'Learn how to design large-scale distributed systems and prepare for system design interviews.',
         syllabus: [
-            'Load Balancing',
-            'Caching',
-            'Database Sharding',
-            'System Design Case Studies'
+            { title: 'Load Balancing', hours: 2 },
+            { title: 'Caching', hours: 2 },
+            { title: 'Database Sharding', hours: 3 },
+            { title: 'System Design Case Studies', hours: 3 }
         ]
     },
     {
         id: 4,
         title: 'Statistical Thinking for Data Science',
-        provider: 'edX',
+        mentors: ['Prof. Mine Çetinkaya-Rundel'],
         platform: 'edX',
         duration: '20 hours',
         level: 'Beginner',
@@ -86,33 +86,33 @@ export const mockCourses = [
         link: 'https://www.coursera.org/learn/probability-statistics', // User requested all link to Coursera
         description: 'Learn how to think about data and uncertainty using the tools of probability and statistics.',
         syllabus: [
-            'Probability',
-            'Random Variables',
-            'Inference',
-            'Linear Regression'
+            { title: 'Probability', hours: 5 },
+            { title: 'Random Variables', hours: 5 },
+            { title: 'Inference', hours: 5 },
+            { title: 'Linear Regression', hours: 5 }
         ]
     },
     {
         id: 5,
         title: 'React - The Complete Guide',
-        provider: 'Udemy',
+        mentors: ['Gary Simon', 'Maximilian Schwarzmüller'],
         platform: 'Udemy',
         duration: '48 hours',
         level: 'Intermediate',
         rating: 4.8,
         reviews: 15000,
         price: 'Paid',
-        fee: '$13.99',
+        fee: 'RM 65',
         category: 'Frontend',
         image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2070&auto=format&fit=crop',
         skills: ['React', 'JavaScript', 'Frontend'],
         link: 'https://www.coursera.org/learn/react-basics', // User requested all link to Coursera
         description: 'Dive in and learn React.js from scratch! Learn Reactjs, Hooks, Redux, React Routing, Animations, Next.js and way more!',
         syllabus: [
-            'React Basics',
-            'State & Props',
-            'React Hooks',
-            'Redux & State Management'
+            { title: 'React Basics', hours: 10 },
+            { title: 'State & Props', hours: 12 },
+            { title: 'React Hooks', hours: 14 },
+            { title: 'Redux & State Management', hours: 12 }
         ]
     }
 ];

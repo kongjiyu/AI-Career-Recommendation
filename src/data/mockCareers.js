@@ -8,10 +8,10 @@ export const mockCareers = [
         description: 'Design and implement artificial intelligence solutions for enterprise problems. You will work with data scientists and engineers to deploy scalable AI models.',
         requiredSkills: ['Python', 'Cloud Computing (AWS/GCP)', 'Deep Learning', 'System Design'],
         typicalDay: [
-            { time: '09:00 AM', activity: 'Team Standup & Sprint Planning' },
-            { time: '10:30 AM', activity: 'Deep Work: System Architecture Design' },
-            { time: '01:00 PM', activity: 'Code Review & Team Mentorship' },
-            { time: '03:00 PM', activity: 'Stakeholder Meeting: AI Strategy' }
+            { date: 'Mon, Jan 12, 2026', activity: 'Team Standup & Sprint Planning' },
+            { date: 'Tue, Jan 13, 2026', activity: 'Deep Work: System Architecture Design' },
+            { date: 'Wed, Jan 14, 2026', activity: 'Code Review & Team Mentorship' },
+            { date: 'Thu, Jan 15, 2026', activity: 'Stakeholder Meeting: AI Strategy' }
         ],
         fitAnalysis: 'Your strong background in technical problem solving and leadership makes you a perfect fit for high-level architectural roles.',
         topCompanies: ['Google', 'AWS', 'Microsoft', 'NVIDIA']
@@ -25,10 +25,10 @@ export const mockCareers = [
         description: 'Analyze complex datasets to extract meaningful insights. You will build predictive models and visualize data to drive business decisions.',
         requiredSkills: ['Python/R', 'SQL', 'Statistics', 'Data Visualization'],
         typicalDay: [
-            { time: '09:00 AM', activity: 'Data Cleaning & Pipeline Maintenance' },
-            { time: '11:00 AM', activity: 'Model Training & Hyperparameter Tuning' },
-            { time: '02:00 PM', activity: 'Data Visualization & Reporting' },
-            { time: '04:00 PM', activity: 'Presenting Insights to Product Team' }
+            { date: 'Mon, Jan 12, 2026', activity: 'Data Cleaning & Pipeline Maintenance' },
+            { date: 'Tue, Jan 13, 2026', activity: 'Model Training & Hyperparameter Tuning' },
+            { date: 'Wed, Jan 14, 2026', activity: 'Data Visualization & Reporting' },
+            { date: 'Thu, Jan 15, 2026', activity: 'Presenting Insights to Product Team' }
         ],
         fitAnalysis: 'You have excellent analytical skills, though you may need to brush up on specific statistical modeling techniques.',
         topCompanies: ['Netflix', 'Spotify', 'Uber', 'Airbnb']
@@ -42,10 +42,10 @@ export const mockCareers = [
         description: 'Lead the vision and strategy for technical products. You will bridge the gap between engineering, design, and business teams.',
         requiredSkills: ['Agile/Scrum', 'User Research', 'Strategic Planning', 'Communication'],
         typicalDay: [
-            { time: '09:30 AM', activity: 'Reviewing User Feedback & Metrics' },
-            { time: '11:00 AM', activity: 'Product Roadmap Planning' },
-            { time: '01:30 PM', activity: 'User Research Interviews' },
-            { time: '04:00 PM', activity: 'Coordination with Engineering Team' }
+            { date: 'Mon, Jan 12, 2026', activity: 'Reviewing User Feedback & Metrics' },
+            { date: 'Tue, Jan 13, 2026', activity: 'Product Roadmap Planning' },
+            { date: 'Wed, Jan 14, 2026', activity: 'User Research Interviews' },
+            { date: 'Thu, Jan 15, 2026', activity: 'Coordination with Engineering Team' }
         ],
         fitAnalysis: 'Your leadership score is high, but you might find the lack of direct coding less satisfying if you enjoy hands-on technical work.',
         topCompanies: ['Atlassian', 'Salesforce', 'Adobe', 'Shopify']
@@ -59,10 +59,10 @@ export const mockCareers = [
         description: 'Build end-to-end web applications. You will handle both frontend interfaces and backend APIs.',
         requiredSkills: ['React', 'Node.js', 'Database Design', 'API Development'],
         typicalDay: [
-            { time: '10:00 AM', activity: 'Daily Standup' },
-            { time: '10:30 AM', activity: 'Feature Development (Frontend/Backend)' },
-            { time: '02:00 PM', activity: 'Bug Fixing & Code Optimization' },
-            { time: '04:30 PM', activity: 'Peer Code Reviews' }
+            { date: 'Mon, Jan 12, 2026', activity: 'Daily Standup' },
+            { date: 'Tue, Jan 13, 2026', activity: 'Feature Development (Frontend/Backend)' },
+            { date: 'Wed, Jan 14, 2026', activity: 'Bug Fixing & Code Optimization' },
+            { date: 'Thu, Jan 15, 2026', activity: 'Peer Code Reviews' }
         ],
         fitAnalysis: 'A solid option, but your assessment suggests you lean more towards high-level strategy than implementation details.',
         topCompanies: ['Meta', 'Amazon', 'Stripe', 'Vercel']
@@ -76,10 +76,10 @@ export const mockCareers = [
         description: 'Understand user behaviors, needs, and motivations through observation techniques and task analysis.',
         requiredSkills: ['User Testing', 'Prototyping', 'Qualitative Analysis', 'Empathy'],
         typicalDay: [
-            { time: '09:00 AM', activity: 'Planning User Studies' },
-            { time: '11:00 AM', activity: 'Conducting Usability Testing' },
-            { time: '02:00 PM', activity: 'Synthesizing Research Findings' },
-            { time: '04:00 PM', activity: 'Workshop with Design Team' }
+            { date: 'Mon, Jan 12, 2026', activity: 'Planning User Studies' },
+            { date: 'Tue, Jan 13, 2026', activity: 'Conducting Usability Testing' },
+            { date: 'Wed, Jan 14, 2026', activity: 'Synthesizing Research Findings' },
+            { date: 'Thu, Jan 15, 2026', activity: 'Workshop with Design Team' }
         ],
         fitAnalysis: 'This role leverages your creative side, but may not fully utilize your strong technical aptitude.',
         topCompanies: ['Apple', 'IDEO', 'Figma', 'Dropbox']

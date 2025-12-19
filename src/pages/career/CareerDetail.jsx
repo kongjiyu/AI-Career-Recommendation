@@ -132,7 +132,7 @@ export default function CareerDetail() {
                                         <div key={i} className="flex gap-4 relative">
                                             <div className="h-4 w-4 rounded-full border-2 border-primary-accent bg-white z-10 mt-1 shrink-0"></div>
                                             <div>
-                                                <p className="text-xs font-bold text-primary-accent uppercase tracking-wide">{event.time}</p>
+                                                <p className="text-xs font-bold text-primary-accent uppercase tracking-wide">{event.date}</p>
                                                 <p className="text-slate-700 font-medium">{event.activity}</p>
                                             </div>
                                         </div>
