@@ -73,6 +73,10 @@ export default function CourseCatalog() {
                                             <input type="radio" name="level" checked={filter === 'Intermediate'} onChange={() => setFilter('Intermediate')} className="text-primary-accent" />
                                             Intermediate
                                         </label>
+                                        <label className="flex items-center gap-2 text-sm text-slate-600 cursor-pointer">
+                                            <input type="radio" name="level" checked={filter === 'Advanced'} onChange={() => setFilter('Advanced')} className="text-primary-accent" />
+                                            Advanced
+                                        </label>
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +113,7 @@ export default function CourseCatalog() {
                                         </div>
 
                                         <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                                            <span className="font-bold text-slate-900">{course.price}</span>
+                                            <span className="font-bold text-slate-900">{course.fee || course.price}</span>
                                             <span className="text-xs font-medium text-primary-accent uppercase tracking-wide">View Course</span>
                                         </div>
                                     </div>
@@ -119,6 +123,6 @@ export default function CourseCatalog() {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </Layout >
     );
 }

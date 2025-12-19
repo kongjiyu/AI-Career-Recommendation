@@ -3,13 +3,14 @@ import { Layout } from '../../components/layout/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { mockCareers } from '../../data/mockCareers';
-import { ArrowRight, Filter, TrendingUp, DollarSign, Briefcase, Building2 } from 'lucide-react';
+import { ArrowRight, Filter, TrendingUp, DollarSign, Briefcase, Building2, Info, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '../../lib/utils';
 
 export default function CareerDashboard() {
     const navigate = useNavigate();
     const [filter, setFilter] = useState('All');
+    const [showInfo, setShowInfo] = useState(true);
 
     const filteredCareers = filter === 'All'
         ? mockCareers
@@ -42,6 +43,30 @@ export default function CareerDashboard() {
                         </Button>
                     </div>
                 </div>
+
+                {showInfo && (
+                    <div className="bg-blue-50 border border-blue-100 rounded-lg p-4 relative animate-in fade-in slide-in-from-top-2">
+                        <button
+                            onClick={() => setShowInfo(false)}
+                            className="absolute top-2 right-2 text-slate-400 hover:text-slate-600 p-1"
+                        >
+                            <X className="h-4 w-4" />
+                        </button>
+                        <div className="flex gap-3">
+                            <div className="bg-blue-100 p-2 rounded-full h-fit">
+                                <Info className="h-4 w-4 text-blue-600" />
+                            </div>
+                            <div>
+                                <h4 className="font-semibold text-slate-800 mb-1">Career vs. Job: What's the difference?</h4>
+                                <p className="text-sm text-slate-600 leading-relaxed">
+                                    A <strong>job</strong> is a specific role you perform in exchange for pay (e.g., "Junior Developer").
+                                    A <strong>career</strong> is your long-term professional journey, encompassing all the jobs, skills, and experiences you accumulate over time (e.g., "Software Engineering").
+                                    The recommendations below focus on <em>careers</em> — long-term paths with growth potential, rather than just single job openings.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                )}
 
                 <div className="grid gap-6">
                     {filteredCareers.map((career) => (

@@ -71,6 +71,13 @@ export default function Assessment() {
     return (
         <Layout>
             <div className="max-w-2xl mx-auto space-y-8">
+                <div>
+                    <h1 className="text-3xl font-bold text-primary-highlight">Career Assessment</h1>
+                    <p className="text-slate-600 mt-2">
+                        Discover your ideal career path with our AI-powered assessment.
+                    </p>
+                </div>
+
                 <div className="space-y-2">
                     <div className="flex justify-between text-sm text-slate-500">
                         <span>Question {currentQuestion + 1} of {questions.length}</span>
