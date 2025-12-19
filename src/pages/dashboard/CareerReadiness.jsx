@@ -93,6 +93,7 @@ export default function CareerReadiness() {
                     {/* Radar Chart Section */}
                     <div className="space-y-6">
                         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 relative overflow-hidden">
+                            <h3 className="text-lg font-bold text-slate-900 mb-4 text-center">Skill Breakdown</h3>
                             <div className="h-[350px] w-full flex items-center justify-center relative z-10">
                                 <Radar data={chartData} options={chartOptions} />
                             </div>
