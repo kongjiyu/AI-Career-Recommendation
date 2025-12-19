@@ -5,6 +5,7 @@ import { Button } from '../../components/ui/Button';
 import { mockCareers } from '../../data/mockCareers';
 import { ArrowLeft, CheckCircle, XCircle, TrendingUp, DollarSign, Calendar, BookOpen, Heart, Building, ExternalLink } from 'lucide-react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { cn, getGrowthColor } from '../../lib/utils';
 
 export default function CareerDetail() {
     const { id } = useParams();
@@ -33,7 +34,9 @@ export default function CareerDetail() {
                             </Button>
                         </div>
                         <div className="flex gap-4 mt-4 text-slate-600">
-                            <span className="flex items-center gap-1"><TrendingUp className="h-4 w-4" /> {career.outlook}</span>
+                            <span className={cn("flex items-center gap-1 px-2 py-1 rounded border text-sm font-medium", getGrowthColor(career.outlook))}>
+                                <TrendingUp className="h-4 w-4" /> {career.outlook}
+                            </span>
 
                             <div className="flex items-center gap-2">
                                 <DollarSign className="h-4 w-4" />

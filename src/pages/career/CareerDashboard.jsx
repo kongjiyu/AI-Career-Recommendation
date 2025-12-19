@@ -5,7 +5,7 @@ import { Button } from '../../components/ui/Button';
 import { mockCareers } from '../../data/mockCareers';
 import { ArrowRight, Filter, TrendingUp, DollarSign, Briefcase, Building2, Info, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { cn } from '../../lib/utils';
+import { cn, getGrowthColor } from '../../lib/utils';
 
 export default function CareerDashboard() {
     const navigate = useNavigate();
@@ -90,8 +90,8 @@ export default function CareerDashboard() {
                                         </div>
 
                                         <div className="flex flex-wrap gap-4 text-sm text-slate-500">
-                                            <div className="flex items-center gap-1">
-                                                <Briefcase className="h-4 w-4" />
+                                            <div className={cn("flex items-center gap-1 px-2 py-1 rounded border text-xs font-medium", getGrowthColor(career.outlook))}>
+                                                <Briefcase className="h-3 w-3" />
                                                 {career.outlook}
                                             </div>
                                             <div className="flex items-center gap-1">
