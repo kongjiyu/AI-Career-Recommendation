@@ -25,13 +25,19 @@ export function Navbar() {
                 {!isLoginPage && (
                     <div className="hidden md:flex items-center space-x-6">
                         <Link to="/dashboard" className="text-sm font-medium text-slate-600 hover:text-primary-highlight transition-colors">
-                            Home
+                            Dashboard
+                        </Link>
+                        <Link to="/learning/courses" className="text-sm font-medium text-slate-600 hover:text-primary-highlight transition-colors">
+                            Courses
+                        </Link>
+                        <Link to="/mentorship/find" className="text-sm font-medium text-slate-600 hover:text-primary-highlight transition-colors">
+                            Mentors
+                        </Link>
+                        <Link to="/jobs/find" className="text-sm font-medium text-slate-600 hover:text-primary-highlight transition-colors">
+                            Jobs
                         </Link>
                         <Link to="/assessment" className="text-sm font-medium text-slate-600 hover:text-primary-highlight transition-colors">
                             Assessment
-                        </Link>
-                        <Link to="/dashboard" className="text-sm font-medium text-slate-600 hover:text-primary-highlight transition-colors">
-                            Dashboard
                         </Link>
                     </div>
                 )}

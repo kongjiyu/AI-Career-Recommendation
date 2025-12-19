@@ -115,7 +115,7 @@ export default function JobListing() {
                         <div className="bg-white p-5 rounded-lg border border-slate-200">
                             <h3 className="font-bold text-slate-900 mb-4">Salary Range</h3>
                             <div className="space-y-3">
-                                {['Under $50k', '$50k - $100k', '$100k - $150k', '$150k+'].map(range => (
+                                {['Under RM 3k', 'RM 3k - RM 6k', 'RM 6k - RM 10k', 'RM 10k+'].map(range => (
                                     <label key={range} className="flex items-center gap-2 text-sm text-slate-600 cursor-pointer hover:text-primary-accent">
                                         <input
                                             type="checkbox"
@@ -157,7 +157,7 @@ export default function JobListing() {
 
                                     <div className="flex flex-wrap gap-4 text-sm text-slate-500 mt-3 mb-4">
                                         <span className="flex items-center gap-1"><MapPin className="h-4 w-4" /> {job.location}</span>
-                                        <span className="flex items-center gap-1"><DollarSign className="h-4 w-4" /> {job.salary}</span>
+                                        <span className="flex items-center gap-1">{job.salary}</span>
                                         <span className="flex items-center gap-1"><Briefcase className="h-4 w-4" /> Posted {job.posted}</span>
                                     </div>
 

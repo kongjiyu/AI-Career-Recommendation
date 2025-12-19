@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/Ca
 import { Button } from '../../components/ui/Button';
 import { mockReadiness, mockNotifications } from '../../data/mockProgress';
 import { mockCourses } from '../../data/mockLearning';
-import { ArrowRight, Activity, BookOpen, Users, Bell, Award } from 'lucide-react';
+import { ArrowRight, Activity, BookOpen, Users, Bell, Award, Briefcase } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '../../lib/utils';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
@@ -39,15 +39,15 @@ export default function UserDashboard() {
                     <div className="md:col-span-2 space-y-6">
                         {/* Quick Stats Grid */}
                         <div className="grid grid-cols-2 gap-4">
-                            <Card className="bg-gradient-to-br from-blue-500 to-blue-600 text-white border-none cursor-pointer hover:shadow-lg transition-shadow" onClick={() => navigate('/dashboard/readiness')}>
+                            <Card className="bg-gradient-to-br from-indigo-500 to-indigo-600 text-white border-none cursor-pointer hover:shadow-lg transition-shadow" onClick={() => navigate('/jobs/find')}>
                                 <CardContent className="p-6">
                                     <div className="flex justify-between items-start">
                                         <div>
-                                            <p className="text-blue-100 text-sm font-medium mb-1">Career Readiness</p>
-                                            <h3 className="text-3xl font-bold text-white">{mockReadiness.score}%</h3>
-                                            <p className="text-blue-100 text-xs mt-2">{mockReadiness.level}</p>
+                                            <p className="text-indigo-100 text-sm font-medium mb-1">Job Matches</p>
+                                            <h3 className="text-3xl font-bold text-white">12</h3>
+                                            <p className="text-indigo-100 text-xs mt-2">New roles match your profile</p>
                                         </div>
-                                        <Activity className="h-6 w-6 text-blue-200" />
+                                        <Briefcase className="h-6 w-6 text-indigo-200" />
                                     </div>
                                 </CardContent>
                             </Card>

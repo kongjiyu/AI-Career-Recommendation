@@ -51,7 +51,6 @@ export default function JobDetail() {
                                 </div>
                             </div>
                             <div className="flex items-center gap-2 text-slate-700">
-                                <DollarSign className="h-5 w-5 text-slate-400" />
                                 <div>
                                     <p className="text-xs text-slate-500 uppercase font-bold">Salary</p>
                                     <p className="font-medium">{job.salary}</p>
